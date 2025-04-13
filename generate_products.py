@@ -2,21 +2,20 @@
 import pandas as pd
 
 products = pd.DataFrame([
-    [1, "Boho Summer Top", "boho,summer,pastel", "tops", 90],
-    [2, "Denim Jeans", "denim,casual", "bottoms", 85],
-    [3, "Floral Skirt", "floral,summer,casual", "skirts", 88],
-    [4, "Formal Shirt", "formal,office,white", "tops", 80],
-    [5, "Beach Dress", "boho,beach,summer", "dresses", 95],
-    [6, "Casual Hoodie", "casual,winter,warm", "outerwear", 75],
-    [7, "Slim Fit Blazer", "formal,blazer,office", "jackets", 92],
-    [8, "Graphic Tee", "casual,trendy,summer", "tops", 77],
-    [9, "Leather Jacket", "leather,trendy,winter", "jackets", 93],
-    [10, "Cotton Kurta", "ethnic,casual", "tops", 89]
+    [1, "गोदान", "प्रेमचंद,यथार्थवाद,कृषक", "उपन्यास", 98],
+    [2, "रश्मिरथी", "रामधारी सिंह दिनकर,काव्य,कर्ण", "कविता", 97],
+    [3, "मधुशाला", "हरिवंश राय बच्चन,कविता,दार्शनिक", "कविता", 95],
+    [4, "सूरज का सातवाँ घोड़ा", "धर्मवीर भारती,कहानी,प्रतीकात्मक", "उपन्यास", 90],
+    [5, "यामा", "महादेवी वर्मा,छायावाद,कविता", "कविता", 93],
+    [6, "गबन", "प्रेमचंद,नारी,सामाजिक", "उपन्यास", 91],
+    [7, "उर्वशी", "रामधारी सिंह दिनकर,पौराणिक,कविता", "कविता", 94],
+    [8, "कवि", "निराला,आधुनिकता,स्वतंत्रता", "कविता", 89],
+    [9, "निर्मला", "प्रेमचंद,नारीशिक्षा,विधवा", "उपन्यास", 92],
+    [10, "सप्तक", "अज्ञेय,प्रयोगवाद,समकालीन", "कविता-संग्रह", 88]
 ], columns=["product_id", "title", "tags", "category", "popularity_score"])
 
 products.to_csv("products.csv", index=False)
 print("products.csv created.")
-
 
 import pandas as pd
 
