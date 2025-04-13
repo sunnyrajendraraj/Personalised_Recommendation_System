@@ -1,5 +1,7 @@
 # 📚 Hindi Literature-Based Personalized Book Recommendation System
 
+### 🚀 [Live Demo on Streamlit](https://sunnyrecommendshindibooks.streamlit.app/)
+
 ## 🌟 Overview
 Welcome to the **Hindi Literature-Based Personalized Book Recommendation System** — a unique project tailored for enthusiasts of **Hindi literature** and **creative writing**. This system provides personalized book recommendations, inspired by the way a knowledgeable librarian would help you explore your next favorite book based on your reading history and preferences.
 
