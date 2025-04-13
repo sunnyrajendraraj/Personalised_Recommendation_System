@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.pkl
+*.h5
+*.pt
+*.joblib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/config.toml
+
+# Data files
+*.csv
+*.json
+*.xlsx
+*.db
+*.sqlite3
+*.mha
+*.nii
+*.zip
+*.tar
+*.gz
+*.log
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+
+# Sensitive files
+users.json
+secrets.toml
+
+# Model weights
+models/
+checkpoints/

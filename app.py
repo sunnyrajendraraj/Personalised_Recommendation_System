@@ -2,17 +2,42 @@ import streamlit as st
 import pandas as pd
 import os
 import json
+from PIL import Image
 from utils import *
 from visualize import *
-from PIL import Image
+from auth import authenticate, register_user
 
 # ✅ Set config FIRST
-st.set_page_config(page_title="AI Shopping Recommender", layout="wide")
+st.set_page_config(page_title="📚 AI Shopping Recommender", layout="wide")
 
-# --- User Login ---
-st.sidebar.title("👤 Login")
-user_id = st.sidebar.text_input("Enter your user ID", "user_1")
-st.sidebar.success(f"Logged in as {user_id}")
+# --- Authentication Sidebar ---
+st.sidebar.title("🔐 Login / Register")
+auth_mode = st.sidebar.radio("Choose option", ["Login", "Register"])
+
+username = st.sidebar.text_input("Username")
+password = st.sidebar.text_input("Password", type="password")
+
+if auth_mode == "Login":
+    if st.sidebar.button("Login"):
+        if authenticate(username, password):
+            st.session_state["logged_in"] = True
+            st.session_state["user"] = username
+            st.sidebar.success(f"✅ Logged in as {username}")
+        else:
+            st.sidebar.error("❌ Invalid username or password.")
+elif auth_mode == "Register":
+    if st.sidebar.button("Register"):
+        if register_user(username, password):
+            st.sidebar.success("🎉 Registered successfully! Now login.")
+        else:
+            st.sidebar.error("⚠️ Username already exists.")
+
+# --- Access Control ---
+if not st.session_state.get("logged_in", False):
+    st.warning("🚫 Please login to access the recommendation system.")
+    st.stop()
+
+user_id = st.session_state["user"]
 
 # --- Load Product Data ---
 if not os.path.exists("products.csv"):
