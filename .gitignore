@@ -1,12 +1,5 @@
 # Python
-__pycache__/
-*.py[cod]
-*.so
-*.egg-info/
-*.pkl
-*.h5
-*.pt
-*.joblib
+__pycache__
 
 # Jupyter
 .ipynb_checkpoints/
