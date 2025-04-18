@@ -8,7 +8,7 @@ from visualize import *
 from auth import authenticate, register_user
 
 # ✅ Set config FIRST
-st.set_page_config(page_title="📚 AI Shopping Recommender", layout="wide")
+st.set_page_config(page_title="📚 AI Hindi Book Recommender", layout="wide")
 
 # --- Authentication Sidebar ---
 st.sidebar.title("🔐 Login / Register")
@@ -46,7 +46,7 @@ if not os.path.exists("products.csv"):
 
 products = pd.read_csv("products.csv")
 
-st.title("🛍️ Personalized Shopping Recommendation System")
+st.title("Hindi Book Recommendation System")
 st.markdown("This app evolves its recommendations based on your interactions.")
 
 # --- Cold Start Recommendations ---
@@ -54,7 +54,7 @@ st.header("🔍 Round 1: Cold Start Recommendations")
 cold_recs = cold_start_recommendations(products)
 
 # --- Display Product Thumbnails (150x150 grid) ---
-st.subheader("🖼️ Product Thumbnails")
+st.subheader("🖼️ Book Thumbnails")
 image_folder = './data/images'
 thumbnail_width, thumbnail_height = 150, 150
 cols = st.columns(5)
